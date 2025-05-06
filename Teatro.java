@@ -37,7 +37,7 @@ public class Teatro {
     // GETTER Y METODOS DEL MENU
     
     
-    //GETTER PARA LA VENTA DE ENTRADAS (PROPIEDADES ENTREGADAS POR MEDIO DEL MAIN)
+    //GETTER PARA LA VENTA DE ENTRADAS (VALORES ENTREGADAS POR MEDIO DEL MAIN)
     public String venderEntrada(int idCliente, String tipoCliente, int numeroAsiento, String tipoEntrada) {
         if (asientosOcupados.contains(numeroAsiento)) {
             return "ASIENTO OCUPADO!";
@@ -58,7 +58,7 @@ public class Teatro {
         return "VENTA REALIZADA! ID VENTA: " + venta.idVenta +", DESCUENTO APLICADO %"+(int)(descuento*100)+ ", PRECIO FINAL $" + precioFinal;
     }
 
-    //GETTER PARA ELIMINAR ENTRADA POR ID DE VENTA   
+    //METODO PARA ELIMINAR ENTRADA POR ID DE VENTA   
     public boolean eliminarEntrada(int idVenta) {
         for (int i = 0; i < contadorVentas; i++) {
             if (ventas[i] != null && ventas[i].idVenta == idVenta) {
@@ -70,7 +70,7 @@ public class Teatro {
         return false;
     }
     
-    //GETTER PARA BUSCAR ENTRADA POR ID DE VENTA    
+    //METODO PARA BUSCAR ENTRADA POR ID DE VENTA    
     public Venta buscarVenta(int idVenta) {
         for (int i = 0; i < contadorVentas; i++) {
             if (ventas[i] != null && ventas[i].idVenta == idVenta) {
